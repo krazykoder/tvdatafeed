@@ -1,4 +1,5 @@
 # **TvDatafeed**
+### Updated 08/07/2024
 
 A simple TradingView historical Data Downloader. Tvdatafeed allows downloading upto 5000 bars on any of the supported timeframe.
 
@@ -79,8 +80,10 @@ nifty_futures_data = tv.get_hist(symbol='NIFTY',exchange='NSE',interval=Interval
 # crudeoil
 crudeoil_data = tv.get_hist(symbol='CRUDEOIL',exchange='MCX',interval=Interval.in_1_hour,n_bars=5000,fut_contract=1)
 
-# downloading data for extended market hours
-extended_price_data = tv.get_hist(symbol="EICHERMOT",exchange="NSE",interval=Interval.in_1_hour,n_bars=500, extended_session=False)
+# extended market hours
+tv.get_hist(symbol="SPY",exchange="AMEX",interval=Interval.in_1_hour,n_bars=500, extended_session=True)
+tv.get_hist(symbol="NDQ",exchange="",interval=Interval.in_1_hour,n_bars=500, extended_session=True)
+
 ```
 
 ---
