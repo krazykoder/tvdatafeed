@@ -9,11 +9,7 @@ If you found the content useful and want to support my work, you can buy me a co
 
 This module is installed via pip:
 
-```sh
-pip install tvdatafeed
-```
-
-or installing from github repo
+Installing from github repo
 
 ```sh
 pip install --upgrade --no-cache-dir git+https://github.com/krazykoder/tvdatafeed.git
