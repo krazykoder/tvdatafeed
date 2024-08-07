@@ -59,13 +59,14 @@ for example-
 ```python
 
 # indices - leave exchange '' blank
-tv.get_hist('DJA','', interval=Interval.in_daily,n_bars=5000)
-tv.get_hist('SPX','', interval=Interval.in_daily,n_bars=5000)
-tv.get_hist('SPY','', interval=Interval.in_daily,n_bars=5000)
-tv.get_hist('NDQ','', interval=Interval.in_daily,n_bars=5000)
-tv.get_hist('VOO','', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('DJA','', interval=Interval.in_daily,n_bars=5000) # DOW AVERAGE
+tv.get_hist('SPX','', interval=Interval.in_daily,n_bars=5000) # SPY index
+tv.get_hist('SPY','', interval=Interval.in_daily,n_bars=5000) # etf fund 
+tv.get_hist('NDQ','', interval=Interval.in_daily,n_bars=5000) # Nasdaq index 
+tv.get_hist('VOO','', interval=Interval.in_daily,n_bars=5000) 
 tv.get_hist('TQQQ','', interval=Interval.in_daily,n_bars=10000)
-tv.get_hist('DJI','', interval=Interval.in_daily,n_bars=10000)
+tv.get_hist('DJI','', interval=Interval.in_daily,n_bars=10000) # DOW 
+tv.get_hist('GLD','', interval=Interval.in_daily,n_bars=10000) # GOLD 
 
 # ETF, EQUITY, STOCKS
 tv.get_hist('SPY','AMEX', interval=Interval.in_daily,n_bars=5000)
@@ -74,8 +75,12 @@ tv.get_hist(symbol='AMD',exchange='NASDAQ',interval=Interval.in_daily,n_bars=100
 tv.get_hist(symbol='QQQ',exchange='NASDAQ',interval=Interval.in_1_hour,n_bars=10000)
 tv.get_hist(symbol='QQQ',exchange='NASDAQ',interval=Interval.in_30_minute,n_bars=10000)
 
-# futures continuous contract
-nifty_futures_data = tv.get_hist(symbol='NIFTY',exchange='NSE',interval=Interval.in_1_hour,n_bars=1000,fut_contract=1)
+# FUTURES - leave exchange '' blank for US futures 
+tv.get_hist(symbol='ES1!',exchange='',interval=Interval.in_1_hour,n_bars=1000) #SPY FUTURE
+tv.get_hist(symbol='ES2!',exchange='',interval=Interval.in_1_hour,n_bars=1000) #SPY FUTURE
+tv.get_hist(symbol='USOIL',exchange='',interval=Interval.in_daily,n_bars=1000) #USOIL FUTURE
+
+tv.get_hist(symbol='NIFTY',exchange='NSE',interval=Interval.in_1_hour,n_bars=1000,fut_contract=1)
 
 # crudeoil
 crudeoil_data = tv.get_hist(symbol='CRUDEOIL',exchange='MCX',interval=Interval.in_1_hour,n_bars=5000,fut_contract=1)
@@ -92,29 +97,17 @@ tv.get_hist(symbol="NDQ",exchange="",interval=Interval.in_1_hour,n_bars=500, ext
 Following timeframes intervals are supported-
 
 `Interval.in_1_minute`
-
 `Interval.in_3_minute`
-
 `Interval.in_5_minute`
-
 `Interval.in_15_minute`
-
 `Interval.in_30_minute`
-
 `Interval.in_45_minute`
-
 `Interval.in_1_hour`
-
 `Interval.in_2_hour`
-
 `Interval.in_3_hour`
-
 `Interval.in_4_hour`
-
 `Interval.in_daily`
-
 `Interval.in_weekly`
-
 `Interval.in_monthly`
 
 ---
