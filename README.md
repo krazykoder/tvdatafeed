@@ -1,5 +1,5 @@
 # **TvDatafeed**
-### Updated 08/07/2024
+### Updated 08/07/2024 by `krazykoder` from [fork-tvdatafeed](https://github.com/stefanomorni/fork-tvdatafeed)
 
 A simple TradingView historical Data Downloader. Tvdatafeed allows downloading upto 5000 bars on any of the supported timeframe.
 
