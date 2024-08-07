@@ -2,9 +2,6 @@
 
 A simple TradingView historical Data Downloader. Tvdatafeed allows downloading upto 5000 bars on any of the supported timeframe.
 
-If you found the content useful and want to support my work, you can buy me a coffee!
-[![](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/StreamAlpha)
-
 ## Installation
 
 This module is installed via pip:
@@ -14,16 +11,6 @@ Installing from github repo
 ```sh
 pip install --upgrade --no-cache-dir git+https://github.com/krazykoder/tvdatafeed.git
 ```
-
-For usage instructions, watch these videos-
-
-v1.2 tutorial with installation and backtrader usage
-
-[![Watch the video](https://img.youtube.com/vi/f76dOZW2gwI/hqdefault.jpg)](https://youtu.be/f76dOZW2gwI)
-
-Full tutorial
-
-[![Watch the video](https://img.youtube.com/vi/qDrXmb2ZRjo/hqdefault.jpg)](https://youtu.be/qDrXmb2ZRjo)
 
 ---
 
@@ -69,8 +56,22 @@ It accepts following arguments and returns pandas dataframe
 for example-
 
 ```python
-# index
-nifty_index_data = tv.get_hist(symbol='NIFTY',exchange='NSE',interval=Interval.in_1_hour,n_bars=1000)
+
+# indices - leave exchange '' blank
+tv.get_hist('DJA','', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('SPX','', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('SPY','', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('NDQ','', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('VOO','', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('TQQQ','', interval=Interval.in_daily,n_bars=10000)
+tv.get_hist('DJI','', interval=Interval.in_daily,n_bars=10000)
+
+# ETF, EQUITY, STOCKS
+tv.get_hist('SPY','AMEX', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist('SPXL','AMEX', interval=Interval.in_daily,n_bars=5000)
+tv.get_hist(symbol='AMD',exchange='NASDAQ',interval=Interval.in_daily,n_bars=10000)
+tv.get_hist(symbol='QQQ',exchange='NASDAQ',interval=Interval.in_1_hour,n_bars=10000)
+tv.get_hist(symbol='QQQ',exchange='NASDAQ',interval=Interval.in_30_minute,n_bars=10000)
 
 # futures continuous contract
 nifty_futures_data = tv.get_hist(symbol='NIFTY',exchange='NSE',interval=Interval.in_1_hour,n_bars=1000,fut_contract=1)
@@ -83,15 +84,6 @@ extended_price_data = tv.get_hist(symbol="EICHERMOT",exchange="NSE",interval=Int
 ```
 
 ---
-
-## Calculating Indicators
-
-Indicators data is not downloaded from tradingview. For that you can use [TA-Lib](https://github.com/mrjbq7/ta-lib). Check out this video for installation and usage instructions-
-
-[![Watch the video](https://img.youtube.com/vi/0MeHXJm9HRk/hqdefault.jpg)](https://youtu.be/0MeHXJm9HRk)
-
----
-
 ## Supported Time Intervals
 
 Following timeframes intervals are supported-
@@ -124,20 +116,3 @@ Following timeframes intervals are supported-
 
 ---
 
-## Read this before creating an issue
-
-Before creating an issue in this library, please follow the following steps.
-
-1. Search the problem you are facing is already asked by someone else. There might be some issues already there, either solved/unsolved related to your problem. Go to [issues](https://github.com/StreamAlpha/tvdatafeed/issues) page, use `is:issue` as filter and search your problem. ![image](https://user-images.githubusercontent.com/59556194/128167319-2654cfa1-f718-4a52-82f8-b0c0d26bf4ef.png)
-2. If you feel your problem is not asked by anyone or no issues are related to your problem, then create a new issue.
-3. Describe your problem in detail while creating the issue. If you don't have time to detail/describe the problem you are facing, assume that I also won't be having time to respond to your problem.
-4. Post a sample code of the problem you are facing. If I copy paste the code directly from issue, I should be able to reproduce the problem you are facing.
-5. Before posting the sample code, test your sample code yourself once. Only sample code should be tested, no other addition should be there while you are testing.
-6. Have some print() function calls to display the values of some variables related to your problem.
-7. Post the results of print() functions also in the issue.
-8. Use the insert code feature of github to inset code and print outputs, so that the code is displyed neat. !
-9. If you have multiple lines of code, use tripple grave accent ( ``` ) to insert multiple lines of code. 
-    
-    [Example:](https://docs.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks)
-
-    ![1659809630082](image/README/1659809630082.png)
