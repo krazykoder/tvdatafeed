@@ -59,13 +59,13 @@ for example-
 ```python
 
 # indices - leave exchange '' blank
+tv.get_hist('NDQ','', interval=Interval.in_daily,n_bars=5000) # Nasdaq index 
+tv.get_hist('DJI','', interval=Interval.in_daily,n_bars=10000) # DOW index
 tv.get_hist('DJA','', interval=Interval.in_daily,n_bars=5000) # DOW AVERAGE
 tv.get_hist('SPX','', interval=Interval.in_daily,n_bars=5000) # SPY index
 tv.get_hist('SPY','', interval=Interval.in_daily,n_bars=5000) # etf fund 
-tv.get_hist('NDQ','', interval=Interval.in_daily,n_bars=5000) # Nasdaq index 
 tv.get_hist('VOO','', interval=Interval.in_daily,n_bars=5000) 
 tv.get_hist('TQQQ','', interval=Interval.in_daily,n_bars=10000)
-tv.get_hist('DJI','', interval=Interval.in_daily,n_bars=10000) # DOW 
 tv.get_hist('GLD','', interval=Interval.in_daily,n_bars=10000) # GOLD 
 
 # ETF, EQUITY, STOCKS
