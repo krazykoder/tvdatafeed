@@ -4,8 +4,8 @@
 
 from tvDatafeed import tvData, Interval
 
-username = 'eagerdarwin@gmail.com'
-password = '$k jh34KUSjfsfs^^_Rwsdgvs'
+# username = 'eagerdarwin@gmail.com'
+# password = '$k jh34KUSjfsfs^^_Rwsdgvs'
 # tv = tvData (username, password) # works 
 # tv = tvData (username, password, "eyJhbGciOiJSUzUxMiIsImtpZCI6IkdaeFUiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjo4Mjc5NTkxNiwiZXhwIjoxNzI1MDA2MzM1LCJpYXQiOjE3MjQ5OTE5MzUsInBsYW4iOiIiLCJleHRfaG91cnMiOjEsInBlcm0iOiIiLCJzdHVkeV9wZXJtIjoiIiwibWF4X3N0dWRpZXMiOjIsIm1heF9mdW5kYW1lbnRhbHMiOjEsIm1heF9jaGFydHMiOjEsIm1heF9hY3RpdmVfYWxlcnRzIjoxLCJtYXhfc3R1ZHlfb25fc3R1ZHkiOjEsImZpZWxkc19wZXJtaXNzaW9ucyI6W10sIm1heF9vdmVyYWxsX2FsZXJ0cyI6MjAwMCwibWF4X2FjdGl2ZV9wcmltaXRpdmVfYWxlcnRzIjo1LCJtYXhfYWN0aXZlX2NvbXBsZXhfYWxlcnRzIjoxLCJtYXhfY29ubmVjdGlvbnMiOjJ9.r-qOih_o-X9en3KrOYp9cD1wCxa2qinT_W5j0_p4DIGUVOxIkRBISvl6mWeYaJMqBsh0WTp4HH01WSiUEhYDk-gkuFsVLkwTnLYSGDOP-WKMpIPxE6UFWld50q-vKeZ4wPOYhP-fz0tjfExqNfg-9lIIA-KAqvor0Kw7vSFrGAk") # works 
 
@@ -32,13 +32,18 @@ financial_fullDict ['short_name'] # 'AAPL'
 
 # ? --------------------- Earnings / Dividends/  RAW ---------------------- ? # 
 
-tm = tv.get_timeseries('AAPL','', interval=Interval.in_daily, n_bars=8000)
-ts, ern, div = tv.get_timeseries_earnings_dividends('AAPL','', interval=Interval.in_daily, n_bars=8000,debug=True)
+tv = tvData()
+# tm = tv.get_timeseries('AAPL','', interval=Interval.in_daily, n_bars=8000)
 
-ts, ern, div = tv.get_earnings('AAPL','', interval=Interval.in_daily, n_bars=8000)
+raw_data = tv.get_timeseries_earnings_dividends('AAPL','', interval=Interval.in_daily, n_bars=8000,debug=True)
 
-tm
-ts
+ts, ern, div = tv.get_timeseries_earnings_dividends('AAPL','', interval=Interval.in_daily, n_bars=8000)
+
+ts, ern, div = tv.get_timeseries_earnings_dividends('HNRG','', interval=Interval.in_daily, n_bars=8000,)
+ts, ern, div = tv.get_timeseries_earnings_dividends('AVGO','', interval=Interval.in_daily, n_bars=8000,)
+
+ern.to_csv('t.csv')
+div.to_csv('t.csv')
 
 
 import re 

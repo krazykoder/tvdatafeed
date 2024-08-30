@@ -213,7 +213,6 @@ class tvData:
             # Time series : ohlcv 
             t = list(map(lambda x : x['v'], ts))
             t_col = ["datetime", "open", "high", "low", "close", "volume"]
-            import pandas as pd 
             df = pd.DataFrame(t, columns=t_col)
             df['datetime'] = pd.to_datetime(df['datetime'], unit='s')
             df = df.set_index('datetime')
@@ -232,7 +231,6 @@ class tvData:
             # Time series : dividend 
             d = list(map(lambda x : x['v'], div))
             t_col = ["xdate", "divamt", "ex_date", "dd", "pay_date" ]
-            import pandas as pd 
             d_df = pd.DataFrame(d, columns=t_col)
             #  [1699626600.0, 0.239999995, 1699574400000.0, 1e+100, 1700092800000.0]
             d_df['xdate'] = pd.to_datetime(d_df['xdate'], unit='s')
@@ -322,7 +320,7 @@ class tvData:
 
         return symbol
 
-    def get_earnings(
+    def get_timeseries_earnings_dividends(
         self,
         symbol: str,
         exchange: str = "NASDAQ",
@@ -426,10 +424,13 @@ class tvData:
                 # raw_data = raw_data + result + "\n"
                 raw_data = raw_data + result
             except Exception as e:
+                print ("------- WS Timeout -------")
                 logger.error(e)
+                print (raw_data)
                 break
 
-            if ("study_completed" in result) and ("series_completed" in result) :
+            # if ("study_completed" in result) and ("series_completed" in result) :
+            if (raw_data.count("study_completed") == 2) and ("series_completed" in raw_data) :
                 break
         # print ("DATA >>>>> \n", raw_data)
         if debug:
