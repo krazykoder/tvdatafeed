@@ -14,6 +14,7 @@ tv = tvData () # nologin method, data you access may be limited
 # most simple 1D Data - returns a pandas dataframe 
 
 timeseries_DF = tv.get_timeseries('SPY','', interval=Interval.in_daily, n_bars=8000)
+timeseries_DF = tv.get_timeseries('IXIC','', interval=Interval.in_daily, n_bars=8000)
 
 # ? Get Raw data - using flag `debug`
 raw_data_debug = tv.get_timeseries('AAPL','NASDAQ', interval=Interval.in_daily, n_bars=8000, debug=True)
@@ -37,7 +38,13 @@ tv = tvData()
 
 raw_data = tv.get_timeseries_earnings_dividends('AAPL','', interval=Interval.in_daily, n_bars=8000,debug=True)
 
+# ! NO VOLUME DATA
+raw_data = tv.get_timeseries_earnings_dividends('IXIC','', interval=Interval.in_daily, n_bars=8000,debug=True)
+
 ts, ern, div = tv.get_timeseries_earnings_dividends('AAPL','', interval=Interval.in_daily, n_bars=8000)
+# ! NO VOLUME DATA
+ts, ern, div = tv.get_timeseries_earnings_dividends('IXIC','', interval=Interval.in_daily, n_bars=8000)
+
 
 ts, ern, div = tv.get_timeseries_earnings_dividends('HNRG','', interval=Interval.in_daily, n_bars=8000,)
 ts, ern, div = tv.get_timeseries_earnings_dividends('AVGO','', interval=Interval.in_daily, n_bars=8000,)
@@ -45,6 +52,8 @@ ts, ern, div = tv.get_timeseries_earnings_dividends('AVGO','', interval=Interval
 ern.to_csv('t.csv')
 div.to_csv('t.csv')
 
+# ! NO VOLUME DATA
+raw_data = tv.get_timeseries_earnings_dividends('IXIC','', interval=Interval.in_daily, n_bars=8000,debug=True)
 
 import re 
 import json 
@@ -65,7 +74,7 @@ for item in dataDict :
 
 # Time series : ohlcv 
 t = list(map(lambda x : x['v'], ts))
-t_col = ["datetime", "open", "high", "low", "close", "volume"]
+t_col = ["datetime", "open", "high", "low", "close", "volume"] if len(t[0]) == 6 else ["datetime", "open", "high", "low", "close"]  # ! NO VOLUME DATA CASE HANDLING
 import pandas as pd 
 df = pd.DataFrame(t, columns=t_col)
 df['datetime'] = pd.to_datetime(df['datetime'], unit='s')

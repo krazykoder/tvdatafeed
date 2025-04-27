@@ -203,42 +203,48 @@ class tvData:
 
             # identify : timeseries, dividend series, earnings series 
             for item in dataDict : 
-                try : ts = item ['p'][1]['sds_1']['s'] # ohlc array 
+                try : 
+                    ts = item ['p'][1]['sds_1']['s'] # ohlc array 
+                    
+                    # Time series : ohlcv 
+                    t = list(map(lambda x : x['v'], ts))
+                    has_volume = len(t[0]) == 6
+                    t_col = ["datetime", "open", "high", "low", "close", "volume"] if has_volume else ["datetime", "open", "high", "low", "close"]  # NO VOLUME DATA CASE HANDLING
+                    
+                    df = pd.DataFrame(t, columns=t_col)
+                    df['datetime'] = pd.to_datetime(df['datetime'], unit='s')
+                    df = df.set_index('datetime')             
+                    if not has_volume :  df["volume"] = 0.0 # NO VOLUME DATA CASE HANDLING                    
                 except : pass 
-                try: div = item['p'][1]['st2']["st"] # dividend array
+                
+                try: 
+                    div = item['p'][1]['st2']["st"] # dividend array
+                    
+                    # Time series : dividend 
+                    d = list(map(lambda x : x['v'], div))
+                    t_col = ["xdate", "divamt", "ex_date", "dd", "pay_date" ]
+                    d_df = pd.DataFrame(d, columns=t_col)
+                    #  [1699626600.0, 0.239999995, 1699574400000.0, 1e+100, 1700092800000.0]
+                    d_df['xdate'] = pd.to_datetime(d_df['xdate'], unit='s')
+                    d_df['ex_date'] = pd.to_datetime(d_df['ex_date'], unit='ms')
+                    d_df['pay_date'] = pd.to_datetime(d_df['pay_date'], unit='ms')
+                    d_df = d_df.set_index('xdate')
+                    # d_df.loc['2015']
                 except : pass 
-                try: ern = item ['p'][1]['st1']['st'] # earnings array 
+                
+                try: 
+                    ern = item ['p'][1]['st1']['st'] # earnings array             
+                    # Time series : earnings/ eps/ rev / dates  
+                    e = list(map(lambda x : x['v'], ern))
+                    t_col = ["datetime", "eps_std", "eps_est", "qy", "date", "eps_act", "rev_est_M", "rev_act_M", "sl"]
+                    e_df = pd.DataFrame(e, columns=t_col)
+                    e_df['datetime'] = pd.to_datetime(e_df['datetime'], unit='s')
+                    e_df['qy'] = pd.to_datetime(e_df['qy'], unit='s')
+                    e_df['date'] = pd.to_datetime(e_df['date'], unit='ms')
+                    e_df = e_df.set_index('datetime')
+                    # e_df.loc['2004']
                 except: pass
 
-            # Time series : ohlcv 
-            t = list(map(lambda x : x['v'], ts))
-            t_col = ["datetime", "open", "high", "low", "close", "volume"]
-            df = pd.DataFrame(t, columns=t_col)
-            df['datetime'] = pd.to_datetime(df['datetime'], unit='s')
-            df = df.set_index('datetime')
-
-
-            # Time series : earnings/ eps/ rev / dates  
-            e = list(map(lambda x : x['v'], ern))
-            t_col = ["datetime", "eps_std", "eps_est", "qy", "date", "eps_act", "rev_est_M", "rev_act_M", "sl"]
-            e_df = pd.DataFrame(e, columns=t_col)
-            e_df['datetime'] = pd.to_datetime(e_df['datetime'], unit='s')
-            e_df['qy'] = pd.to_datetime(e_df['qy'], unit='s')
-            e_df['date'] = pd.to_datetime(e_df['date'], unit='ms')
-            e_df = e_df.set_index('datetime')
-            # e_df.loc['2004']
-
-            # Time series : dividend 
-            d = list(map(lambda x : x['v'], div))
-            t_col = ["xdate", "divamt", "ex_date", "dd", "pay_date" ]
-            d_df = pd.DataFrame(d, columns=t_col)
-            #  [1699626600.0, 0.239999995, 1699574400000.0, 1e+100, 1700092800000.0]
-            d_df['xdate'] = pd.to_datetime(d_df['xdate'], unit='s')
-            d_df['ex_date'] = pd.to_datetime(d_df['ex_date'], unit='ms')
-            d_df['pay_date'] = pd.to_datetime(d_df['pay_date'], unit='ms')
-            d_df = d_df.set_index('xdate')
-            # d_df.loc['2015']
-        
         except: 
             pass
         
