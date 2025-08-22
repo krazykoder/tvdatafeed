@@ -28,8 +28,35 @@ raw_data_debug = tv.get_timeseries('AAPL','NASDAQ', interval=Interval.in_daily, 
 len(financial_fullDict.keys()) # 1254 - 1290 keys  - check 
 financial_fullDict ['short_name'] # 'AAPL'
 
+financial_fullDict ['net_margin_fq_h'] # 'AAPL'
+financial_fullDict ['net_margin_fy_h'] # 'AAPL'
+financial_fullDict ['fiscal_period_fq_h'] # 'AAPL'
+financial_fullDict ['fiscal_period_fy_h'] # 'AAPL'
 
-# ------------------------- END KEY FUNCITONS ---------------------------------# 
+financial_fullDict.keys()
+
+# filter keys that partial matches with keyword "_fy_h"
+[key for key in financial_fullDict.keys() if "_fy_h" in key]
+
+financial_fullDict['total_cash_dividends_paid_fy_h']
+financial_fullDict['earnings_per_share_forecast_fq_h']
+
+[key for key in financial_fullDict.keys() if "forecast" in key]
+financial_fullDict['earnings_per_share_forecast_fq']
+financial_fullDict['earnings_per_share_forecast_fq_h']
+financial_fullDict['earnings_per_share_forecast_fy_h']
+
+[key for key in financial_fullDict.keys() if "earnings" in key]
+[key for key in financial_fullDict.keys() if "price" in key]
+financial_fullDict['price_book_fq_h']
+financial_fullDict['price_earnings_fq_h']
+financial_fullDict['price_earnings_fy_h']
+
+[key for key in financial_fullDict.keys() if "period" in key]
+
+
+
+# ------------------------- END KEY FUNCITONS -------------------------------# 
 
 # ? --------------------- Earnings / Dividends/  RAW ---------------------- ? # 
 
