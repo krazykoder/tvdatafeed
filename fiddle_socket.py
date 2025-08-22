@@ -21,9 +21,14 @@ raw_data_debug = tv.get_timeseries('AAPL','NASDAQ', interval=Interval.in_daily, 
 
 
 
-# 22 quarters and 10 fiscal years 
+# ! -> 22 quarters and 10 fiscal years 
 (revenueQ, earningsQ, revenueFY, earningsFY), financial_fullDict = tv.get_financials('KLAC','NASDAQ')
 (revenueQ, earningsQ, revenueFY, earningsFY), financial_fullDict, myhtml = tv.get_financials('AMD','NASDAQ', html=True)
+financial_fullDict ['market_cap_basic']
+(revenueQ, earningsQ, revenueFY, earningsFY), financial_fullDict, myhtml = tv.get_financials('AAPL','NASDAQ', html=True)
+
+
+_, financial_fullDict = tv.get_financials('KLAC','')
 
 len(financial_fullDict.keys()) # 1254 - 1290 keys  - check 
 financial_fullDict ['short_name'] # 'AAPL'
@@ -32,6 +37,7 @@ financial_fullDict ['net_margin_fq_h'] # 'AAPL'
 financial_fullDict ['net_margin_fy_h'] # 'AAPL'
 financial_fullDict ['fiscal_period_fq_h'] # 'AAPL'
 financial_fullDict ['fiscal_period_fy_h'] # 'AAPL'
+financial_fullDict ['revenue_seg_by_region_h'] # 'AAPL'
 
 financial_fullDict.keys()
 
@@ -45,6 +51,8 @@ financial_fullDict['earnings_per_share_forecast_fq_h']
 financial_fullDict['earnings_per_share_forecast_fq']
 financial_fullDict['earnings_per_share_forecast_fq_h']
 financial_fullDict['earnings_per_share_forecast_fy_h']
+financial_fullDict['earnings_fiscal_period_fy_h']
+financial_fullDict['fiscal_period_end_fy']
 
 [key for key in financial_fullDict.keys() if "earnings" in key]
 [key for key in financial_fullDict.keys() if "price" in key]
