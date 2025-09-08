@@ -7,7 +7,7 @@ import json
 SOCKET = "wss://data.tradingview.com/socket.io/websocket"
 
 headers = {
-    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
     # "Accept-Language": "en-US,en;q=0.9",
     # "Cache-Control": "no-cache",
     # "Connection": "Upgrade",
@@ -18,7 +18,8 @@ headers = {
     # "Sec-WebSocket-Key": "Qf9IDRKqcgNBrNs7X4FK9w==",
     # "Sec-WebSocket-Version": 13,
     # "Upgrade": "websocket",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+    # "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0"
 }
 
 
