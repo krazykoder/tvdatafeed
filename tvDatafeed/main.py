@@ -150,13 +150,13 @@ class tvData:
         cols =["datetime", "open", "high", "low", "close", "volume"]
         """
         try:
-            out = re.search('"s":\[(.+?)\}\]', raw_data).group(1)
+            out = re.search(r'"s":\[(.+?)\}\]', raw_data).group(1)
             x = out.split(',{"')
             data = list()
             volume_data = True
 
             for xi in x:
-                xi = re.split("\[|:|,|\]", xi)
+                xi = re.split(r"\[|:|,|\]", xi)
                 ts = datetime.datetime.fromtimestamp(float(xi[4]))
 
                 row = [ts]
@@ -256,21 +256,25 @@ class tvData:
     def __create_earnings_df(raw_data):
         """Extracts Revenues and Earnings : FY and FQ"""
         try:
-            out = re.search('"revenues_fq_h":\[(.+?)\]', raw_data).group(1)
-            df_revenue_q = pd.read_json(out, lines=True)
+            out = re.search(r'"revenues_fq_h":\[(.+?)\]', raw_data).group(1)
+            data = json.loads("[" + out + "]")
+            df_revenue_q = pd.DataFrame(data)
 
-            out = re.search('"earnings_fq_h":\[(.+?)\]', raw_data).group(1)
-            df_earnings_q = pd.read_json(out, lines=True)
+            out = re.search(r'"earnings_fq_h":\[(.+?)\]', raw_data).group(1)
+            data = json.loads("[" + out + "]")
+            df_earnings_q = pd.DataFrame(data)
 
-            out = re.search('"revenues_fy_h":\[(.+?)\]', raw_data).group(1)
-            df_revenue_f = pd.read_json(out, lines=True)
+            out = re.search(r'"revenues_fy_h":\[(.+?)\]', raw_data).group(1)
+            data = json.loads("[" + out + "]")
+            df_revenue_f = pd.DataFrame(data)
 
-            out = re.search('"earnings_fy_h":\[(.+?)\]', raw_data).group(1)
-            df_earnings_f = pd.read_json(out, lines=True)
+            out = re.search(r'"earnings_fy_h":\[(.+?)\]', raw_data).group(1)
+            data = json.loads("[" + out + "]")
+            df_earnings_f = pd.DataFrame(data)
 
             return df_revenue_q, df_earnings_q, df_revenue_f, df_earnings_f
-        except AttributeError:
-            logger.error("no data, please check the exchange and symbol")
+        except (AttributeError, json.JSONDecodeError, ValueError) as e:
+            logger.error(f"no data, please check the exchange and symbol: {e}")
 
     @staticmethod
     def __create_financial_dict_full(raw_data):

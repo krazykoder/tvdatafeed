@@ -14,7 +14,12 @@ tv = tvData () # nologin method, data you access may be limited
 # most simple 1D Data - returns a pandas dataframe 
 
 timeseries_DF = tv.get_timeseries('SPY','', interval=Interval.in_daily, n_bars=8000)
+
 timeseries_DF = tv.get_timeseries('IXIC','', interval=Interval.in_daily, n_bars=8000)
+timeseries_DF = tv.get_timeseries('AAPL','NASDAQ', interval=Interval.in_daily, n_bars=8000)
+
+timeseries_DF = tv.get_timeseries('BRK.B','', interval=Interval.in_daily, n_bars=8000)
+# timeseries_DF = tv.get_timeseries('HWM/P','', interval=Interval.in_daily, n_bars=8000)
 
 # ? Get Raw data - using flag `debug`
 raw_data_debug = tv.get_timeseries('AAPL','NASDAQ', interval=Interval.in_daily, n_bars=8000, debug=True)
@@ -26,6 +31,9 @@ raw_data_debug = tv.get_timeseries('AAPL','NASDAQ', interval=Interval.in_daily, 
 (revenueQ, earningsQ, revenueFY, earningsFY), financial_fullDict, myhtml = tv.get_financials('AMD','NASDAQ', html=True)
 financial_fullDict ['market_cap_basic']
 (revenueQ, earningsQ, revenueFY, earningsFY), financial_fullDict, myhtml = tv.get_financials('AAPL','NASDAQ', html=True)
+
+tv.get_financials('KLAC','NASDAQ')
+tv.get_financials('KLAC','NASDAQ', debug=True)
 
 
 _, financial_fullDict = tv.get_financials('KLAC','')

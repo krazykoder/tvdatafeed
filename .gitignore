@@ -17,3 +17,4 @@ env.bak/
 venv.bak/
 tvDatafeed/symbols.pkl
 tvDatafeed/beta.py
+.DS_Store
