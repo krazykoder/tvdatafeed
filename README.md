@@ -15,9 +15,9 @@ pip install --upgrade --no-cache-dir git+https://github.com/krazykoder/tvdatafee
 
 ---
 
-## About release 2.0.0
+## About release 2.0.1
 
-Version 2.0.0 is a major release and is not backward compatible. make sure you update your code accordingly. Thanks to [stefanomorni](https://github.com/stefanomorni) for contributing and removing selenium dependancy.
+Version 2.0.1 is a patch release with bug fixes. Version 2.0.0 was a major release and is not backward compatible. make sure you update your code accordingly. Thanks to [stefanomorni](https://github.com/stefanomorni) for contributing and removing selenium dependancy.
 
 ## Usage
 

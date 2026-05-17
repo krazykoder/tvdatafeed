@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**tvdatafeed** is a Python library for downloading historical market data (OHLCV, financials, earnings, dividends) from TradingView via WebSocket. Version 2.0.0 is a complete rewrite — no Selenium, WebSocket-based only. Not backward compatible with v1.x.
+**tvdatafeed** is a Python library for downloading historical market data (OHLCV, financials, earnings, dividends) from TradingView via WebSocket. Version 2.0.1 is the latest stable release with bug fixes. The base 2.0.0 was a complete rewrite — no Selenium, WebSocket-based only. Not backward compatible with v1.x.
 
 ## Installation & Setup
 
