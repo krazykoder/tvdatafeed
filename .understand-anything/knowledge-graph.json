@@ -1,0 +1,2266 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "tvdatafeed",
+    "languages": [
+      "python"
+    ],
+    "frameworks": [],
+    "description": "A Python library for downloading historical market data (OHLCV, financials, earnings, dividends) from TradingView via WebSocket.",
+    "analyzedAt": "2026-05-26T00:01:28.950069Z",
+    "gitCommitHash": "182b22e2da0bf7587a16b2851dfcbd1319f55a7f"
+  },
+  "nodes": [
+    {
+      "id": "file:archive/_main.py",
+      "type": "file",
+      "name": "_main.py",
+      "filePath": "archive/_main.py",
+      "summary": "Python module _main",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "339 lines"
+    },
+    {
+      "id": "class:archive/_main.py:Interval",
+      "type": "class",
+      "name": "Interval",
+      "filePath": "archive/_main.py",
+      "summary": "Class Interval",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:archive/_main.py:TvDatafeed",
+      "type": "class",
+      "name": "TvDatafeed",
+      "filePath": "archive/_main.py",
+      "summary": "Class TvDatafeed",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__init__",
+      "type": "function",
+      "name": "TvDatafeed.__init__",
+      "filePath": "archive/_main.py",
+      "summary": "Create TvDatafeed object\n\nArgs:\n    username (str, optional): tradingview username. Defaults to None",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__auth",
+      "type": "function",
+      "name": "TvDatafeed.__auth",
+      "filePath": "archive/_main.py",
+      "summary": "Method __auth",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__create_connection",
+      "type": "function",
+      "name": "TvDatafeed.__create_connection",
+      "filePath": "archive/_main.py",
+      "summary": "Method __create_connection",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__filter_raw_message",
+      "type": "function",
+      "name": "TvDatafeed.__filter_raw_message",
+      "filePath": "archive/_main.py",
+      "summary": "Method __filter_raw_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__generate_session",
+      "type": "function",
+      "name": "TvDatafeed.__generate_session",
+      "filePath": "archive/_main.py",
+      "summary": "Method __generate_session",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__generate_chart_session",
+      "type": "function",
+      "name": "TvDatafeed.__generate_chart_session",
+      "filePath": "archive/_main.py",
+      "summary": "Method __generate_chart_session",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__prepend_header",
+      "type": "function",
+      "name": "TvDatafeed.__prepend_header",
+      "filePath": "archive/_main.py",
+      "summary": "Method __prepend_header",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__construct_message",
+      "type": "function",
+      "name": "TvDatafeed.__construct_message",
+      "filePath": "archive/_main.py",
+      "summary": "Method __construct_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__create_message",
+      "type": "function",
+      "name": "TvDatafeed.__create_message",
+      "filePath": "archive/_main.py",
+      "summary": "Method __create_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__send_message",
+      "type": "function",
+      "name": "TvDatafeed.__send_message",
+      "filePath": "archive/_main.py",
+      "summary": "Method __send_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__create_df",
+      "type": "function",
+      "name": "TvDatafeed.__create_df",
+      "filePath": "archive/_main.py",
+      "summary": "Method __create_df",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.__format_symbol",
+      "type": "function",
+      "name": "TvDatafeed.__format_symbol",
+      "filePath": "archive/_main.py",
+      "summary": "Method __format_symbol",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/_main.py:TvDatafeed.get_hist",
+      "type": "function",
+      "name": "TvDatafeed.get_hist",
+      "filePath": "archive/_main.py",
+      "summary": "get historical data\n\nArgs:\n    symbol (str): symbol name\n    exchange (str, optional): exchange, not",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:archive/fiddle_socket.py",
+      "type": "file",
+      "name": "fiddle_socket.py",
+      "filePath": "archive/fiddle_socket.py",
+      "summary": "Python module fiddle_socket",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "423 lines"
+    },
+    {
+      "id": "file:archive/script_data_parser.py",
+      "type": "file",
+      "name": "script_data_parser.py",
+      "filePath": "archive/script_data_parser.py",
+      "summary": "Python module script_data_parser",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "80 lines"
+    },
+    {
+      "id": "file:archive/tv_socket_raw_script_example.py",
+      "type": "file",
+      "name": "tv_socket_raw_script_example.py",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Python module tv_socket_raw_script_example",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "284 lines"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__create_connection",
+      "type": "function",
+      "name": "__create_connection",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __create_connection",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__generate_session",
+      "type": "function",
+      "name": "__generate_session",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __generate_session",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__generate_chart_session",
+      "type": "function",
+      "name": "__generate_chart_session",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __generate_chart_session",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__prepend_header",
+      "type": "function",
+      "name": "__prepend_header",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __prepend_header",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__construct_message",
+      "type": "function",
+      "name": "__construct_message",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __construct_message",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__create_message",
+      "type": "function",
+      "name": "__create_message",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __create_message",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:__send_message",
+      "type": "function",
+      "name": "__send_message",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function __send_message",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:on_open",
+      "type": "function",
+      "name": "on_open",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function on_open",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:on_close",
+      "type": "function",
+      "name": "on_close",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function on_close",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_script_example.py:on_message",
+      "type": "function",
+      "name": "on_message",
+      "filePath": "archive/tv_socket_raw_script_example.py",
+      "summary": "Function on_message",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:fiddle_socket.py",
+      "type": "file",
+      "name": "fiddle_socket.py",
+      "filePath": "fiddle_socket.py",
+      "summary": "Python module fiddle_socket",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "429 lines"
+    },
+    {
+      "id": "file:scan_project.py",
+      "type": "file",
+      "name": "scan_project.py",
+      "filePath": "scan_project.py",
+      "summary": "Comprehensive project scanner for tvdatafeed.\nGenerates scan-result.json for the understand-anything",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "196 lines"
+    },
+    {
+      "id": "function:scan_project.py:count_lines",
+      "type": "function",
+      "name": "count_lines",
+      "filePath": "scan_project.py",
+      "summary": "Count lines in a file.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_project.py:get_file_category",
+      "type": "function",
+      "name": "get_file_category",
+      "filePath": "scan_project.py",
+      "summary": "Determine file category based on filename and language.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_project.py:get_language",
+      "type": "function",
+      "name": "get_language",
+      "filePath": "scan_project.py",
+      "summary": "Determine language based on file extension.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_project.py:should_ignore",
+      "type": "function",
+      "name": "should_ignore",
+      "filePath": "scan_project.py",
+      "summary": "Check if path should be ignored.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_project.py:extract_imports",
+      "type": "function",
+      "name": "extract_imports",
+      "filePath": "scan_project.py",
+      "summary": "Extract imports from Python file.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scan_project.py:scan_project",
+      "type": "function",
+      "name": "scan_project",
+      "filePath": "scan_project.py",
+      "summary": "Scan project and return comprehensive inventory.",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:setup.py",
+      "type": "file",
+      "name": "setup.py",
+      "filePath": "setup.py",
+      "summary": "Python module setup",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "31 lines"
+    },
+    {
+      "id": "file:tvDatafeed/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "tvDatafeed/__init__.py",
+      "summary": "Python module __init__",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "4 lines"
+    },
+    {
+      "id": "file:tvDatafeed/main.py",
+      "type": "file",
+      "name": "main.py",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Python module main",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "777 lines"
+    },
+    {
+      "id": "class:tvDatafeed/main.py:Interval",
+      "type": "class",
+      "name": "Interval",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Class Interval",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:tvDatafeed/main.py:tvData",
+      "type": "class",
+      "name": "tvData",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Class tvData",
+      "tags": [
+        "class"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__init__",
+      "type": "function",
+      "name": "tvData.__init__",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Create tvData object\n\nArgs:\n    username (str, optional): tradingview username. Defaults to None.\n  ",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__auth",
+      "type": "function",
+      "name": "tvData.__auth",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __auth",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_connection",
+      "type": "function",
+      "name": "tvData.__create_connection",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __create_connection",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__filter_raw_message",
+      "type": "function",
+      "name": "tvData.__filter_raw_message",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __filter_raw_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__generate_session",
+      "type": "function",
+      "name": "tvData.__generate_session",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __generate_session",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__generate_chart_session",
+      "type": "function",
+      "name": "tvData.__generate_chart_session",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __generate_chart_session",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__prepend_header",
+      "type": "function",
+      "name": "tvData.__prepend_header",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __prepend_header",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__construct_message",
+      "type": "function",
+      "name": "tvData.__construct_message",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __construct_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_message",
+      "type": "function",
+      "name": "tvData.__create_message",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __create_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__send_message",
+      "type": "function",
+      "name": "tvData.__send_message",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __send_message",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_timeseries_df",
+      "type": "function",
+      "name": "tvData.__create_timeseries_df",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Returns pandas DF for timeseries\ncols =[\"datetime\", \"open\", \"high\", \"low\", \"close\", \"volume\"]",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_ohlcv_earnings_dividends",
+      "type": "function",
+      "name": "tvData.__create_ohlcv_earnings_dividends",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Extracts all together: timeseries, earnings dates, div dates ",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_earnings_df",
+      "type": "function",
+      "name": "tvData.__create_earnings_df",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Extracts Revenues and Earnings : FY and FQ",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_financial_dict_full",
+      "type": "function",
+      "name": "tvData.__create_financial_dict_full",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Extracts all the financial data as dict",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__format_symbol",
+      "type": "function",
+      "name": "tvData.__format_symbol",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __format_symbol",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.get_timeseries_earnings_dividends",
+      "type": "function",
+      "name": "tvData.get_timeseries_earnings_dividends",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "get financial history data\n\nArgs:\n    symbol (str): symbol name\n    exchange (str, optional): exchan",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.get_financials",
+      "type": "function",
+      "name": "tvData.get_financials",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "get financial history data\n\nArgs:\n    symbol (str): symbol name\n    exchange (str, optional): exchan",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.get_timeseries",
+      "type": "function",
+      "name": "tvData.get_timeseries",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "get historical data\n\nArgs:\n    symbol (str): symbol name\n    exchange (str, optional): exchange, not",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tvDatafeed/main.py:tvData.__create_html",
+      "type": "function",
+      "name": "tvData.__create_html",
+      "filePath": "tvDatafeed/main.py",
+      "summary": "Method __create_html",
+      "tags": [
+        "method"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:debug/MU_NASDAQ.json",
+      "type": "config",
+      "name": "MU_NASDAQ",
+      "filePath": "debug/MU_NASDAQ.json",
+      "summary": "JSON data file (542.4 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/analyze_conversion_metrics.py",
+      "type": "file",
+      "name": "analyze_conversion_metrics.py",
+      "filePath": "debug/analyze_conversion_metrics.py",
+      "summary": "Analyze and compare metrics between .ws and .json files\nEnsures complete conversion with detailed me",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "263 lines"
+    },
+    {
+      "id": "function:debug/analyze_conversion_metrics.py:count_ws_metrics",
+      "type": "function",
+      "name": "count_ws_metrics",
+      "filePath": "debug/analyze_conversion_metrics.py",
+      "summary": "Count metrics in raw websocket data",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/analyze_conversion_metrics.py:count_json_metrics",
+      "type": "function",
+      "name": "count_json_metrics",
+      "filePath": "debug/analyze_conversion_metrics.py",
+      "summary": "Count metrics in converted JSON data",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/analyze_conversion_metrics.py:analyze_financial_frame",
+      "type": "function",
+      "name": "analyze_financial_frame",
+      "filePath": "debug/analyze_conversion_metrics.py",
+      "summary": "Analyze the financial data frame in detail",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/analyze_conversion_metrics.py:compare_metrics",
+      "type": "function",
+      "name": "compare_metrics",
+      "filePath": "debug/analyze_conversion_metrics.py",
+      "summary": "Compare metrics between .ws and .json files",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/analyze_conversion_metrics.py:analyze_all_files",
+      "type": "function",
+      "name": "analyze_all_files",
+      "filePath": "debug/analyze_conversion_metrics.py",
+      "summary": "Analyze all .ws and .json file pairs",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/convert_ws_to_json.py",
+      "type": "file",
+      "name": "convert_ws_to_json.py",
+      "filePath": "debug/convert_ws_to_json.py",
+      "summary": "Bulk convert .ws (websocket) files to .json format",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "186 lines"
+    },
+    {
+      "id": "function:debug/convert_ws_to_json.py:parse_websocket_data",
+      "type": "function",
+      "name": "parse_websocket_data",
+      "filePath": "debug/convert_ws_to_json.py",
+      "summary": "Parse websocket protocol data and extract JSON objects",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/convert_ws_to_json.py:count_metrics_in_json",
+      "type": "function",
+      "name": "count_metrics_in_json",
+      "filePath": "debug/convert_ws_to_json.py",
+      "summary": "Count metrics in parsed JSON objects",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/convert_ws_to_json.py:convert_ws_to_json",
+      "type": "function",
+      "name": "convert_ws_to_json",
+      "filePath": "debug/convert_ws_to_json.py",
+      "summary": "Convert a .ws file to .json format",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/convert_ws_to_json.py:bulk_convert_ws_to_json",
+      "type": "function",
+      "name": "bulk_convert_ws_to_json",
+      "filePath": "debug/convert_ws_to_json.py",
+      "summary": "Convert all .ws files in a directory to .json",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/download_raw_data.py",
+      "type": "file",
+      "name": "download_raw_data.py",
+      "filePath": "debug/download_raw_data.py",
+      "summary": "Script to download raw websocket data for symbols and save to .ws files",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "55 lines"
+    },
+    {
+      "id": "function:debug/download_raw_data.py:download_raw_data",
+      "type": "function",
+      "name": "download_raw_data",
+      "filePath": "debug/download_raw_data.py",
+      "summary": "Download raw websocket data for symbols",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/show_format_comparison.py",
+      "type": "file",
+      "name": "show_format_comparison.py",
+      "filePath": "debug/show_format_comparison.py",
+      "summary": "Compare .ws and .json formats and show conversion benefits",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "134 lines"
+    },
+    {
+      "id": "function:debug/show_format_comparison.py:show_format_comparison",
+      "type": "function",
+      "name": "show_format_comparison",
+      "filePath": "debug/show_format_comparison.py",
+      "summary": "Show a comparison of the two formats",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/show_format_comparison.py:show_usage_examples",
+      "type": "function",
+      "name": "show_usage_examples",
+      "filePath": "debug/show_format_comparison.py",
+      "summary": "Show examples of how to use converted JSON files",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/test_actual_functions.py",
+      "type": "file",
+      "name": "test_actual_functions.py",
+      "filePath": "debug/test_actual_functions.py",
+      "summary": "Script to test the actual parser functions from main.py",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "121 lines"
+    },
+    {
+      "id": "function:debug/test_actual_functions.py:create_earnings_df",
+      "type": "function",
+      "name": "create_earnings_df",
+      "filePath": "debug/test_actual_functions.py",
+      "summary": "Extracts Revenues and Earnings : FY and FQ",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/test_actual_functions.py:create_financial_dict_full",
+      "type": "function",
+      "name": "create_financial_dict_full",
+      "filePath": "debug/test_actual_functions.py",
+      "summary": "Extracts all the financial data as dict",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/test_end_to_end.py",
+      "type": "file",
+      "name": "test_end_to_end.py",
+      "filePath": "debug/test_end_to_end.py",
+      "summary": "End-to-end test with the actual tvData class",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "66 lines"
+    },
+    {
+      "id": "file:debug/test_parser.py",
+      "type": "file",
+      "name": "test_parser.py",
+      "filePath": "debug/test_parser.py",
+      "summary": "Script to test the parser against raw websocket data",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "138 lines"
+    },
+    {
+      "id": "function:debug/test_parser.py:analyze_raw_data",
+      "type": "function",
+      "name": "analyze_raw_data",
+      "filePath": "debug/test_parser.py",
+      "summary": "Analyze raw data structure",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/test_parser.py:test_current_parser",
+      "type": "function",
+      "name": "test_current_parser",
+      "filePath": "debug/test_parser.py",
+      "summary": "Test the current parser",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/test_parsing_approaches.py",
+      "type": "file",
+      "name": "test_parsing_approaches.py",
+      "filePath": "debug/test_parsing_approaches.py",
+      "summary": "Test different approaches to fix the parser",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "95 lines"
+    },
+    {
+      "id": "function:debug/test_parsing_approaches.py:test_parsing_approaches",
+      "type": "function",
+      "name": "test_parsing_approaches",
+      "filePath": "debug/test_parsing_approaches.py",
+      "summary": "Test different parsing approaches",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/verify_fix.py",
+      "type": "file",
+      "name": "verify_fix.py",
+      "filePath": "debug/verify_fix.py",
+      "summary": "Verify that the fixed parser works correctly",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "152 lines"
+    },
+    {
+      "id": "function:debug/verify_fix.py:create_earnings_df_fixed",
+      "type": "function",
+      "name": "create_earnings_df_fixed",
+      "filePath": "debug/verify_fix.py",
+      "summary": "FIXED VERSION: Extracts Revenues and Earnings : FY and FQ",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/verify_fix.py:create_financial_dict_full",
+      "type": "function",
+      "name": "create_financial_dict_full",
+      "filePath": "debug/verify_fix.py",
+      "summary": "Extracts all the financial data as dict",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:debug/verify_json_conversion.py",
+      "type": "file",
+      "name": "verify_json_conversion.py",
+      "filePath": "debug/verify_json_conversion.py",
+      "summary": "Verify converted JSON files and extract key financial data",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "114 lines"
+    },
+    {
+      "id": "function:debug/verify_json_conversion.py:verify_json_file",
+      "type": "function",
+      "name": "verify_json_file",
+      "filePath": "debug/verify_json_conversion.py",
+      "summary": "Verify and analyze a converted JSON file",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:debug/verify_json_conversion.py:verify_all_json_files",
+      "type": "function",
+      "name": "verify_all_json_files",
+      "filePath": "debug/verify_json_conversion.py",
+      "summary": "Verify all JSON files in a directory",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:financial_AAPL.json",
+      "type": "config",
+      "name": "financial_AAPL",
+      "filePath": "financial_AAPL.json",
+      "summary": "JSON data file (376.3 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:tvDatafeed/socket.earnings_history.json",
+      "type": "config",
+      "name": "socket.earnings_history",
+      "filePath": "tvDatafeed/socket.earnings_history.json",
+      "summary": "JSON data file (37.2 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:tvDatafeed/socket.financial_history.json",
+      "type": "config",
+      "name": "socket.financial_history",
+      "filePath": "tvDatafeed/socket.financial_history.json",
+      "summary": "JSON data file (106.1 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:tvDatafeed/socket.timeseries.json",
+      "type": "config",
+      "name": "socket.timeseries",
+      "filePath": "tvDatafeed/socket.timeseries.json",
+      "summary": "JSON data file (863.3 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository. **tvdatafeed** is a Python library for download",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "**TvDatafeed**",
+      "filePath": "README.md",
+      "summary": "A simple TradingView historical Data Downloader. Tvdatafeed allows downloading upto 5000 bars on any of the supported timeframe. This module is instal",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/NON_TIMESERIES_NOMENCLATURE.md",
+      "type": "document",
+      "name": "Non-Timeseries Data Nomenclature Reference",
+      "filePath": "data_extract/NON_TIMESERIES_NOMENCLATURE.md",
+      "summary": "**tvdatafeed v2.0.1** \u2014 Scalar fields, metadata, and snapshot metrics Generated: 2026-05-17",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/TIMESERIES_NOMENCLATURE_REFERENCE.md",
+      "type": "document",
+      "name": "TradingView Data Feed \u2014 Timeseries Variable Nomenclature Reference",
+      "filePath": "data_extract/TIMESERIES_NOMENCLATURE_REFERENCE.md",
+      "summary": "**Generated:** 2026-05-17 **Purpose:** Complete guide to understanding variable naming conventions in JSON financial data responses",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/TIMESERIES_PATTERNS_DETAILED.md",
+      "type": "document",
+      "name": "Advanced Timeseries Patterns \u2014 Analysis & Classification",
+      "filePath": "data_extract/TIMESERIES_PATTERNS_DETAILED.md",
+      "summary": "**Generated:** 2026-05-17 **Scope:** Beyond `_fq_h` and `_fy_h` \u2014 comprehensive enumeration of all timeseries structures",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/earnings_fy_timeseries.md",
+      "type": "document",
+      "name": "earnings_fy timeseries mapping",
+      "filePath": "data_extract/earnings_fy_timeseries.md",
+      "summary": "Generated from `debug/variables_reconciled.json` and extraction summary - present: True",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/earnings_fy_timeseries_summary.md",
+      "type": "document",
+      "name": "Earnings timeseries \u2014 summary",
+      "filePath": "data_extract/earnings_fy_timeseries_summary.md",
+      "summary": "Generated from `debug/earnings_fy_timevars.json` - detected as timeseries (list)",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/tvdatafeed_nomenclature_analysis.md",
+      "type": "document",
+      "name": "TVDatafeed Variable Nomenclature Analysis \u2014 Complete Study",
+      "filePath": "data_extract/tvdatafeed_nomenclature_analysis.md",
+      "summary": "Completed comprehensive two-phase analysis of tvdatafeed JSON financial data schema across 5 symbols (KLAC, AAPL, AMD, AVGO, MU). **Phase 1 - Timeseri",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:data_extract/variables_definitions.md",
+      "type": "document",
+      "name": "Variables Definitions \u2014 Quick Reference",
+      "filePath": "data_extract/variables_definitions.md",
+      "summary": "**Version:** 2026-05-17 **See Also:**",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:debug/CONVERSION_GUIDE.md",
+      "type": "document",
+      "name": "WebSocket to JSON Conversion Tools",
+      "filePath": "debug/CONVERSION_GUIDE.md",
+      "summary": "Quick and easy tools to convert TradingView WebSocket data files (`.ws`) to standard JSON format. | File | Purpose | Status |",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:debug/CONVERSION_SUMMARY.md",
+      "type": "document",
+      "name": "WebSocket to JSON Conversion - Complete Summary",
+      "filePath": "debug/CONVERSION_SUMMARY.md",
+      "summary": "Created 3 new conversion tools to convert TradingView WebSocket data files to standard JSON format: 1. **convert_ws_to_json.py** (4.1 KB)",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:debug/DEBUG_SUMMARY.md",
+      "type": "document",
+      "name": "tvDatafeed Parser Fix - Debug Summary",
+      "filePath": "debug/DEBUG_SUMMARY.md",
+      "summary": "The `get_financials()` function was failing to parse websocket JSON data into proper DataFrames. The issue was in the `__create_earnings_df()` method ",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:debug/METRICS_ANALYSIS_REPORT.md",
+      "type": "document",
+      "name": "WebSocket to JSON Conversion - Metrics Analysis Report",
+      "filePath": "debug/METRICS_ANALYSIS_REPORT.md",
+      "summary": "\u2705 **All websocket metrics are being fully converted to JSON** No data loss detected. The conversion preserves 100% of financial metrics, including:",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:debug/README.md",
+      "type": "document",
+      "name": "Quick Start Guide - tvDatafeed Parser Fix",
+      "filePath": "debug/README.md",
+      "summary": "The `get_financials()` function parser now correctly converts websocket JSON data into DataFrames and dictionaries. **File**: `tvDatafeed/main.py` (li",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:tvDatafeed/fields.md",
+      "type": "document",
+      "name": "fields",
+      "filePath": "tvDatafeed/fields.md",
+      "summary": "trade_loaded bid_size",
+      "tags": [
+        "documentation",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:archive/tv_socket_raw_test_exmple.py",
+      "type": "file",
+      "name": "tv_socket_raw_test_exmple.py",
+      "filePath": "archive/tv_socket_raw_test_exmple.py",
+      "summary": "Python module tv_socket_raw_test_exmple",
+      "tags": [
+        "python",
+        "module"
+      ],
+      "complexity": "simple",
+      "languageNotes": "83 lines"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_test_exmple.py:on_open",
+      "type": "function",
+      "name": "on_open",
+      "filePath": "archive/tv_socket_raw_test_exmple.py",
+      "summary": "Function on_open",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_test_exmple.py:on_close",
+      "type": "function",
+      "name": "on_close",
+      "filePath": "archive/tv_socket_raw_test_exmple.py",
+      "summary": "Function on_close",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:archive/tv_socket_raw_test_exmple.py:on_message",
+      "type": "function",
+      "name": "on_message",
+      "filePath": "archive/tv_socket_raw_test_exmple.py",
+      "summary": "Function on_message",
+      "tags": [
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:data_extract/KLAC_NASDAQ.json",
+      "type": "config",
+      "name": "KLAC_NASDAQ",
+      "filePath": "data_extract/KLAC_NASDAQ.json",
+      "summary": "JSON data file (455.6 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:data_extract/earnings_fy_timevars.json",
+      "type": "config",
+      "name": "earnings_fy_timevars",
+      "filePath": "data_extract/earnings_fy_timevars.json",
+      "summary": "JSON data file (159.6 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:data_extract/earnings_timeseries_mapping.json",
+      "type": "config",
+      "name": "earnings_timeseries_mapping",
+      "filePath": "data_extract/earnings_timeseries_mapping.json",
+      "summary": "JSON data file (21362.4 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:data_extract/variables_extraction_summary.json",
+      "type": "config",
+      "name": "variables_extraction_summary",
+      "filePath": "data_extract/variables_extraction_summary.json",
+      "summary": "JSON data file (489.7 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:data_extract/variables_reconciled.json",
+      "type": "config",
+      "name": "variables_reconciled",
+      "filePath": "data_extract/variables_reconciled.json",
+      "summary": "JSON data file (641.0 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:debug/AAPL_NASDAQ.json",
+      "type": "config",
+      "name": "AAPL_NASDAQ",
+      "filePath": "debug/AAPL_NASDAQ.json",
+      "summary": "JSON data file (479.5 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:debug/AMD_NASDAQ.json",
+      "type": "config",
+      "name": "AMD_NASDAQ",
+      "filePath": "debug/AMD_NASDAQ.json",
+      "summary": "JSON data file (483.4 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:debug/AVGO_NASDAQ.json",
+      "type": "config",
+      "name": "AVGO_NASDAQ",
+      "filePath": "debug/AVGO_NASDAQ.json",
+      "summary": "JSON data file (469.0 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "data:debug/KLAC_NASDAQ.json",
+      "type": "config",
+      "name": "KLAC_NASDAQ",
+      "filePath": "debug/KLAC_NASDAQ.json",
+      "summary": "JSON data file (455.6 KB)",
+      "tags": [
+        "json",
+        "data"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:archive/_main.py",
+      "target": "class:archive/_main.py:Interval",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/_main.py",
+      "target": "class:archive/_main.py:TvDatafeed",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__init__",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__auth",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__create_connection",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__filter_raw_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__generate_session",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__generate_chart_session",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__prepend_header",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__construct_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__create_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__send_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__create_df",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.__format_symbol",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:archive/_main.py:TvDatafeed",
+      "target": "function:archive/_main.py:TvDatafeed.get_hist",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__create_connection",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__generate_session",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__generate_chart_session",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__prepend_header",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__construct_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__create_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:__send_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:on_open",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:on_close",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_script_example.py",
+      "target": "function:archive/tv_socket_raw_script_example.py:on_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:scan_project.py",
+      "target": "function:scan_project.py:count_lines",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:scan_project.py",
+      "target": "function:scan_project.py:get_file_category",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:scan_project.py",
+      "target": "function:scan_project.py:get_language",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:scan_project.py",
+      "target": "function:scan_project.py:should_ignore",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:scan_project.py",
+      "target": "function:scan_project.py:extract_imports",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:scan_project.py",
+      "target": "function:scan_project.py:scan_project",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:tvDatafeed/main.py",
+      "target": "class:tvDatafeed/main.py:Interval",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:tvDatafeed/main.py",
+      "target": "class:tvDatafeed/main.py:tvData",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__init__",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__auth",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_connection",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__filter_raw_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__generate_session",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__generate_chart_session",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__prepend_header",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__construct_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__send_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_timeseries_df",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_ohlcv_earnings_dividends",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_earnings_df",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_financial_dict_full",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__format_symbol",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.get_timeseries_earnings_dividends",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.get_financials",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.get_timeseries",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "class:tvDatafeed/main.py:tvData",
+      "target": "function:tvDatafeed/main.py:tvData.__create_html",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/analyze_conversion_metrics.py",
+      "target": "function:debug/analyze_conversion_metrics.py:count_ws_metrics",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/analyze_conversion_metrics.py",
+      "target": "function:debug/analyze_conversion_metrics.py:count_json_metrics",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/analyze_conversion_metrics.py",
+      "target": "function:debug/analyze_conversion_metrics.py:analyze_financial_frame",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/analyze_conversion_metrics.py",
+      "target": "function:debug/analyze_conversion_metrics.py:compare_metrics",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/analyze_conversion_metrics.py",
+      "target": "function:debug/analyze_conversion_metrics.py:analyze_all_files",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/convert_ws_to_json.py",
+      "target": "function:debug/convert_ws_to_json.py:parse_websocket_data",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/convert_ws_to_json.py",
+      "target": "function:debug/convert_ws_to_json.py:count_metrics_in_json",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/convert_ws_to_json.py",
+      "target": "function:debug/convert_ws_to_json.py:convert_ws_to_json",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/convert_ws_to_json.py",
+      "target": "function:debug/convert_ws_to_json.py:bulk_convert_ws_to_json",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/download_raw_data.py",
+      "target": "function:debug/download_raw_data.py:download_raw_data",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/show_format_comparison.py",
+      "target": "function:debug/show_format_comparison.py:show_format_comparison",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/show_format_comparison.py",
+      "target": "function:debug/show_format_comparison.py:show_usage_examples",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/test_actual_functions.py",
+      "target": "function:debug/test_actual_functions.py:create_earnings_df",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/test_actual_functions.py",
+      "target": "function:debug/test_actual_functions.py:create_financial_dict_full",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/test_parser.py",
+      "target": "function:debug/test_parser.py:analyze_raw_data",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/test_parser.py",
+      "target": "function:debug/test_parser.py:test_current_parser",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/test_parsing_approaches.py",
+      "target": "function:debug/test_parsing_approaches.py:test_parsing_approaches",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/verify_fix.py",
+      "target": "function:debug/verify_fix.py:create_earnings_df_fixed",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/verify_fix.py",
+      "target": "function:debug/verify_fix.py:create_financial_dict_full",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/verify_json_conversion.py",
+      "target": "function:debug/verify_json_conversion.py:verify_json_file",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:debug/verify_json_conversion.py",
+      "target": "function:debug/verify_json_conversion.py:verify_all_json_files",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_test_exmple.py",
+      "target": "function:archive/tv_socket_raw_test_exmple.py:on_open",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_test_exmple.py",
+      "target": "function:archive/tv_socket_raw_test_exmple.py:on_close",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    },
+    {
+      "source": "file:archive/tv_socket_raw_test_exmple.py",
+      "target": "function:archive/tv_socket_raw_test_exmple.py:on_message",
+      "type": "contains",
+      "weight": 1.0,
+      "direction": "forward"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:api",
+      "name": "API",
+      "description": "Public API exports and module initialization",
+      "nodeIds": [
+        "file:tvDatafeed/__init__.py"
+      ]
+    },
+    {
+      "id": "layer:core",
+      "name": "Core",
+      "description": "Main WebSocket communication engine and protocol handler",
+      "nodeIds": [
+        "file:tvDatafeed/main.py",
+        "function:tvDatafeed/main.py:tvData.__init__",
+        "function:tvDatafeed/main.py:tvData.__auth",
+        "function:tvDatafeed/main.py:tvData.__create_connection",
+        "function:tvDatafeed/main.py:tvData.__filter_raw_message",
+        "function:tvDatafeed/main.py:tvData.__generate_session",
+        "function:tvDatafeed/main.py:tvData.__generate_chart_session",
+        "function:tvDatafeed/main.py:tvData.__prepend_header",
+        "function:tvDatafeed/main.py:tvData.__construct_message",
+        "function:tvDatafeed/main.py:tvData.__create_message",
+        "function:tvDatafeed/main.py:tvData.__send_message",
+        "function:tvDatafeed/main.py:tvData.__create_timeseries_df",
+        "function:tvDatafeed/main.py:tvData.__create_ohlcv_earnings_dividends",
+        "function:tvDatafeed/main.py:tvData.__create_earnings_df",
+        "function:tvDatafeed/main.py:tvData.__create_financial_dict_full",
+        "function:tvDatafeed/main.py:tvData.__format_symbol",
+        "function:tvDatafeed/main.py:tvData.get_timeseries_earnings_dividends",
+        "function:tvDatafeed/main.py:tvData.get_financials",
+        "function:tvDatafeed/main.py:tvData.get_timeseries",
+        "function:tvDatafeed/main.py:tvData.__create_html",
+        "class:tvDatafeed/main.py:Interval",
+        "class:tvDatafeed/main.py:tvData"
+      ]
+    },
+    {
+      "id": "layer:build-configuration",
+      "name": "Build & Configuration",
+      "description": "Package setup, dependencies, and build configuration",
+      "nodeIds": [
+        "file:setup.py"
+      ]
+    },
+    {
+      "id": "layer:testing-validation",
+      "name": "Testing & Validation",
+      "description": "Debug scripts, parsers, and data validation tools",
+      "nodeIds": [
+        "file:debug/analyze_conversion_metrics.py",
+        "function:debug/analyze_conversion_metrics.py:count_ws_metrics",
+        "function:debug/analyze_conversion_metrics.py:count_json_metrics",
+        "function:debug/analyze_conversion_metrics.py:analyze_financial_frame",
+        "function:debug/analyze_conversion_metrics.py:compare_metrics",
+        "function:debug/analyze_conversion_metrics.py:analyze_all_files",
+        "file:debug/convert_ws_to_json.py",
+        "function:debug/convert_ws_to_json.py:parse_websocket_data",
+        "function:debug/convert_ws_to_json.py:count_metrics_in_json",
+        "function:debug/convert_ws_to_json.py:convert_ws_to_json",
+        "function:debug/convert_ws_to_json.py:bulk_convert_ws_to_json",
+        "file:debug/download_raw_data.py",
+        "function:debug/download_raw_data.py:download_raw_data",
+        "file:debug/show_format_comparison.py",
+        "function:debug/show_format_comparison.py:show_format_comparison",
+        "function:debug/show_format_comparison.py:show_usage_examples",
+        "file:debug/test_actual_functions.py",
+        "function:debug/test_actual_functions.py:create_earnings_df",
+        "function:debug/test_actual_functions.py:create_financial_dict_full",
+        "file:debug/test_end_to_end.py",
+        "file:debug/test_parser.py",
+        "function:debug/test_parser.py:analyze_raw_data",
+        "function:debug/test_parser.py:test_current_parser",
+        "file:debug/test_parsing_approaches.py",
+        "function:debug/test_parsing_approaches.py:test_parsing_approaches",
+        "file:debug/verify_fix.py",
+        "function:debug/verify_fix.py:create_earnings_df_fixed",
+        "function:debug/verify_fix.py:create_financial_dict_full",
+        "file:debug/verify_json_conversion.py",
+        "function:debug/verify_json_conversion.py:verify_json_file",
+        "function:debug/verify_json_conversion.py:verify_all_json_files"
+      ]
+    },
+    {
+      "id": "layer:utilities",
+      "name": "Utilities",
+      "description": "Supporting utilities and helper modules",
+      "nodeIds": [
+        "file:fiddle_socket.py",
+        "file:scan_project.py",
+        "function:scan_project.py:count_lines",
+        "function:scan_project.py:get_file_category",
+        "function:scan_project.py:get_language",
+        "function:scan_project.py:should_ignore",
+        "function:scan_project.py:extract_imports",
+        "function:scan_project.py:scan_project"
+      ]
+    },
+    {
+      "id": "layer:archive",
+      "name": "Archive",
+      "description": "Legacy code and experimental implementations",
+      "nodeIds": [
+        "file:archive/_main.py",
+        "function:archive/_main.py:TvDatafeed.__init__",
+        "function:archive/_main.py:TvDatafeed.__auth",
+        "function:archive/_main.py:TvDatafeed.__create_connection",
+        "function:archive/_main.py:TvDatafeed.__filter_raw_message",
+        "function:archive/_main.py:TvDatafeed.__generate_session",
+        "function:archive/_main.py:TvDatafeed.__generate_chart_session",
+        "function:archive/_main.py:TvDatafeed.__prepend_header",
+        "function:archive/_main.py:TvDatafeed.__construct_message",
+        "function:archive/_main.py:TvDatafeed.__create_message",
+        "function:archive/_main.py:TvDatafeed.__send_message",
+        "function:archive/_main.py:TvDatafeed.__create_df",
+        "function:archive/_main.py:TvDatafeed.__format_symbol",
+        "function:archive/_main.py:TvDatafeed.get_hist",
+        "class:archive/_main.py:Interval",
+        "class:archive/_main.py:TvDatafeed",
+        "file:archive/fiddle_socket.py",
+        "file:archive/script_data_parser.py",
+        "file:archive/tv_socket_raw_script_example.py",
+        "function:archive/tv_socket_raw_script_example.py:__create_connection",
+        "function:archive/tv_socket_raw_script_example.py:__generate_session",
+        "function:archive/tv_socket_raw_script_example.py:__generate_chart_session",
+        "function:archive/tv_socket_raw_script_example.py:__prepend_header",
+        "function:archive/tv_socket_raw_script_example.py:__construct_message",
+        "function:archive/tv_socket_raw_script_example.py:__create_message",
+        "function:archive/tv_socket_raw_script_example.py:__send_message",
+        "function:archive/tv_socket_raw_script_example.py:on_open",
+        "function:archive/tv_socket_raw_script_example.py:on_close",
+        "function:archive/tv_socket_raw_script_example.py:on_message",
+        "file:archive/tv_socket_raw_test_exmple.py",
+        "function:archive/tv_socket_raw_test_exmple.py:on_open",
+        "function:archive/tv_socket_raw_test_exmple.py:on_close",
+        "function:archive/tv_socket_raw_test_exmple.py:on_message"
+      ]
+    },
+    {
+      "id": "layer:data-artifacts",
+      "name": "Data & Artifacts",
+      "description": "Test data samples, financial records, and analysis artifacts",
+      "nodeIds": [
+        "data:debug/MU_NASDAQ.json",
+        "data:financial_AAPL.json",
+        "data:tvDatafeed/socket.earnings_history.json",
+        "data:tvDatafeed/socket.financial_history.json",
+        "data:tvDatafeed/socket.timeseries.json",
+        "document:CLAUDE.md",
+        "document:README.md",
+        "document:data_extract/NON_TIMESERIES_NOMENCLATURE.md",
+        "document:data_extract/TIMESERIES_NOMENCLATURE_REFERENCE.md",
+        "document:data_extract/TIMESERIES_PATTERNS_DETAILED.md",
+        "document:data_extract/earnings_fy_timeseries.md",
+        "document:data_extract/earnings_fy_timeseries_summary.md",
+        "document:data_extract/tvdatafeed_nomenclature_analysis.md",
+        "document:data_extract/variables_definitions.md",
+        "document:debug/CONVERSION_GUIDE.md",
+        "document:debug/CONVERSION_SUMMARY.md",
+        "document:debug/DEBUG_SUMMARY.md",
+        "document:debug/METRICS_ANALYSIS_REPORT.md",
+        "document:debug/README.md",
+        "document:tvDatafeed/fields.md",
+        "data:data_extract/KLAC_NASDAQ.json",
+        "data:data_extract/earnings_fy_timevars.json",
+        "data:data_extract/earnings_timeseries_mapping.json",
+        "data:data_extract/variables_extraction_summary.json",
+        "data:data_extract/variables_reconciled.json",
+        "data:debug/AAPL_NASDAQ.json",
+        "data:debug/AMD_NASDAQ.json",
+        "data:debug/AVGO_NASDAQ.json",
+        "data:debug/KLAC_NASDAQ.json"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Start here to understand tvdatafeed's purpose: download historical OHLCV data from TradingView via WebSocket.",
+      "nodeIds": [
+        "document:README.md"
+      ],
+      "languageLesson": "This project demonstrates WebSocket-based data collection, async I/O patterns, and financial data parsing."
+    },
+    {
+      "order": 2,
+      "title": "Package Entry Point",
+      "description": "The public API is defined in __init__.py, which exports the main tvData class and Interval enum.",
+      "nodeIds": [
+        "file:tvDatafeed/__init__.py"
+      ],
+      "languageLesson": "See how the package exposes its primary interface through __all__ exports."
+    },
+    {
+      "order": 3,
+      "title": "Core Engine: tvData Class",
+      "description": "The main implementation in tvDatafeed/main.py contains the entire data-fetching logic: authentication, WebSocket communication, parsing.",
+      "nodeIds": [
+        "file:tvDatafeed/main.py",
+        "class:tvDatafeed/main.py:tvData"
+      ],
+      "languageLesson": "Explore the tvData class to understand WebSocket message framing (~m~...~m~), regex parsing, and state management."
+    },
+    {
+      "order": 4,
+      "title": "Public API Methods",
+      "description": "Three main entry points: get_timeseries (OHLCV data), get_financials (financial metrics), and get_timeseries_earnings_dividends (events).",
+      "nodeIds": [
+        "function:tvDatafeed/main.py:tvData.get_timeseries",
+        "function:tvDatafeed/main.py:tvData.get_financials",
+        "function:tvDatafeed/main.py:tvData.get_timeseries_earnings_dividends"
+      ],
+      "languageLesson": "Each method follows a similar pattern: format symbol \u2192 create WebSocket session \u2192 send requests \u2192 parse response \u2192 return DataFrame."
+    },
+    {
+      "order": 5,
+      "title": "Authentication & Connection",
+      "description": "Understand how authentication works: users can authenticate with credentials or use unauthorized tokens.",
+      "nodeIds": [
+        "function:tvDatafeed/main.py:tvData.__auth"
+      ],
+      "languageLesson": "The WebSocket connection uses set_auth_token messages and maintains state across multiple requests."
+    },
+    {
+      "order": 6,
+      "title": "Data Parsing & Normalization",
+      "description": "See how raw WebSocket responses are parsed: regex extraction, JSON parsing, DataFrame creation.",
+      "nodeIds": [
+        "function:tvDatafeed/main.py:tvData.__create_timeseries_df"
+      ],
+      "languageLesson": "Learn regex patterns for parsing time series data and handling special cases like indices without volume."
+    },
+    {
+      "order": 7,
+      "title": "Test & Debug Scripts",
+      "description": "Validation utilities in debug/ folder: test_parser.py validates parsing, download_raw_data.py captures live WebSocket data.",
+      "nodeIds": [
+        "file:debug/test_parser.py",
+        "file:debug/download_raw_data.py"
+      ],
+      "languageLesson": "See how to validate implementations and create reproducible test data."
+    },
+    {
+      "order": 8,
+      "title": "Data Extraction & Analysis",
+      "description": "The data_extract/ folder contains analysis of financial fields and earnings/dividend patterns.",
+      "nodeIds": [
+        "document:data_extract/TIMESERIES_NOMENCLATURE_REFERENCE.md",
+        "document:data_extract/TIMESERIES_PATTERNS_DETAILED.md"
+      ],
+      "languageLesson": "Understand the structure of financial data and how WebSocket messages encode complex hierarchies."
+    },
+    {
+      "order": 9,
+      "title": "Configuration & Setup",
+      "description": "Install dependencies and understand the project structure through setup.py and requirements.txt.",
+      "nodeIds": [
+        "file:setup.py"
+      ],
+      "languageLesson": "Key dependencies: pandas (data frames), websocket-client (WebSocket protocol), requests (HTTP auth)."
+    },
+    {
+      "order": 10,
+      "title": "Putting It All Together",
+      "description": "Review examples in tv.ipynb or fiddle_socket.py to see complete workflows: authenticate, download OHLCV, financials, events.",
+      "nodeIds": [
+        "file:fiddle_socket.py"
+      ],
+      "languageLesson": "Interactive examples show real-world usage patterns and how to handle authentication errors."
+    }
+  ]
+}
